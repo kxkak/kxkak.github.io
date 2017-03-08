@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0249)http://119.29.168.180/xcx/?nsukey=vCguGxip7zIp1vBGVzv%2BnCtlo57teCEF%2B2hio1mZaEY1JexZcO9y8h4objwTfJbQFGlgkLCFVh9Gej%2FC7X1oLECERpsGMQaEFCkT0ABz3d33JP8HVMss1397zNjpeUydhAvPe%2FJA%2FKkDMQmK7OYSGfFzsd9QuFNSUeL3bWRUjRE%3D&from=timeline&isappinstalled=0 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>__女生节快乐</title>
+	
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="./files/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./files/jquery.js"></script>
+	<script type="text/javascript" src="./files/garden_dev.js"></script>
+    <script type="text/javascript" src="./files/functions_dev.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content" style="width: 1110px; height: 625px; margin-top: 10px; margin-left: 85px;">
+			<div id="code" style="margin-top: 112.5px;">
+				<span class="comments">/**</span><br>
+				<span class="space"><span class="comments">* 我是一个菜鸟程序员,</span><br>
+				<span class="space"><span class="comments">* 程序员不懂浪漫，所以我只能用我最熟悉的方式——写代码.</span><br>
+				<span class="space"><span class="comments">* 来祝你女生节快乐.</span><br>
+				<span class="space"><span class="comments">*/</span><br>
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"hello"</span>);<br>
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"world"</span>);<br>
+				<span class="comments">// Jan 1, 2017, 我和你说我喜欢你，想和你在一起. </span><br>
+				i.love(u);<br>
+				<span class="comments">// 好开心, 你答应了了！从此我脱离了单身U•ェ•*U的行列.</span><br>
+				u.accepted();<br>
+				<span class="comments">// 从那时起, 我每天都会想着你.</span><br>
+				i.miss(u);<br>
+				<span class="comments">// 并想法设法地照顾你，哄你开心.</span><br>
+				i.takeCareOf(u);<br>
+				<span class="comments">// 你经常说，喜欢不能光说说，要看实际行动.</span><br>
+				<span class="comments">// 所</span></span></span></span></span></div>
+			<div id="loveHeart">
+				<canvas id="garden" width="670" height="625"></canvas>
+				<div id="words" style="position: absolute; top: 205px; left: 595px;">
+					<div id="messages" style="display: block;">
+						__, 我成为你男朋友已经过了
+						<div id="elapseClock"><span class="digit">1</span> month <span class="digit">6</span> day <span class="digit">03</span> hr <span class="digit">34</span> min <span class="digit">45</span> sec</div>
+					</div>
+					<div id="loveu" style="display: block;">
+						我会一直喜欢你.<br>
+						<div class="signature">- gg</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br>
+			Copyright © 2017 <a href="http://http//119.29.168.180/xcx/">__女生节快乐</a> 2017-∞
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var displayMode = 1;
+		var together = new Date();
+		together.setFullYear(2017, 1, 1);
+		together.setHours(13);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		$("#loveHeart").click(function(){
+			displayMode *= -1;
+			timeElapse(together, displayMode);
+		});
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together, displayMode);
+			setInterval(function () {
+				timeElapse(together, displayMode);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+
+</body></html>
